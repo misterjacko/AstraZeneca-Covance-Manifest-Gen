@@ -1,7 +1,7 @@
 var dict = {};
 var unmatched = {};
-var requisitionLength = 3;
-var aliquotLength = 5
+var requisitionLength = 10;
+var aliquotLength = 12;
 
 function ScannerDelete(){
   var deletecode = document.getElementById("deletecode").value;
