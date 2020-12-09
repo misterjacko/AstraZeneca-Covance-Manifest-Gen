@@ -1,59 +1,58 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</head>  
-<body>
-  <script type="text/javascript" src="functions.js"></script>
-  
-  <div class="container">
-    <div class='row'>
-      <div class='col-md-11'>
-        <p id= 'header' style='text-align:center'><h1 style='text-align:center'>AstraZeneca COVID-19 Vaccine Trial*</h1>
-        <h3 style='text-align:center'>Study Site ---> Covance Central Laboratory <br>
-        Shipping Manifest Organization Tool</h3></p>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>  
+  <body>
+    <script type="text/javascript" src="functions.js"></script>
+    <div class="container">
+      <div class='row'>
+        <div class='col-md-11'>
+          <p id= 'header' style='text-align:center'><h1 style='text-align:center'>AstraZeneca COVID-19 Vaccine Trial*</h1>
+          <h3 style='text-align:center'>Study Site ---> Covance Central Laboratory <br>
+          Shipping Manifest Organization Tool</h3>
+          <hr></p>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-3">  
-        <p>You can add your shipment information if you plan on keeping a printed record of your shipment. <br>
-        The information entered on this page is not submitted anywhere.<br> <b>BEWARE!</b> Refreshing the page will cause you to lose your data.<br>
-        Add barcodes using the green ADD box and if you need to remove samples or requisitions you can use the red REMOVE box.<br>
-        The application will remove any non-numbers your barcode reader might add. <br></p>
-        <p>Enter the fields if you plan on printing for your records:</p>
-        <form id="fromHeader" action="/action_page.php">
-          Shipping Date: <input type="date" name="ShipDate"><br>
-          Airbill number: <input type="text" name="AirBillNo"><br>
-          Sample Type: <input type = "text" name="SampleType"><br>
-          <!-- <input type="button" onclick="myFunction()" value="Submit"> -->
-        </form>
-        <p></p>
-        <label style='color:green'>Enter your Barcode here to ADD: </label><br>
-        <input type="text" id="barcode" value="" onchange="ScannerInput()"><br>
-        <br>
-        <label style='color:red; font-weight:bold'>Scan here to REMOVE: </label>
-        <input type="text" id="deletecode" value="" onchange="ScannerDelete()"><br>
-        <br> <br> 
-        <p>* The creator of this tool has nor claims any relationship to AstraZeneca nor Covance. 
-          I am just a person from a lab sharing the tool I made so that I didn't mess up my shipments.
-          Maybe you will have an easier time shipping like I do! <br>
-
-          Additional information can be found <a href='./info.html'>Here</a>.
-        
-        </p>
+      <div class="row">
+        <div class="col-sm-3">  
+          <br>
+          <p>You can add your shipment information if you plan on keeping a printed record of your shipment. <br>
+          The information entered on this page is not submitted anywhere.<br> <b>BEWARE!</b> Refreshing the page will cause you to lose your data.<br>
+          Add barcodes using the green ADD box and if you need to remove samples or requisitions you can use the red REMOVE box.<br>
+          The application will remove any non-numbers your barcode reader might add. <br></p>
+          <p>Enter the fields if you plan on printing for your records:</p>
+          <form id="fromHeader" action="/action_page.php">
+            Shipping Date: <input type="date" name="ShipDate"><br>
+            Airbill number: <input type="text" name="AirBillNo"><br>
+            Sample Type: <input type = "text" name="SampleType"><br>
+            <!-- <input type="button" onclick="myFunction()" value="Submit"> -->
+          </form>
+          <p></p>
+          <label style='color:green'>Enter your Barcode here to ADD: </label><br>
+          <input type="text" id="barcode" value="" onchange="ScannerInput()"><br>
+          <br>
+          <label style='color:red; font-weight:bold'>Scan here to REMOVE: </label>
+          <input type="text" id="deletecode" value="" onchange="ScannerDelete()"><br>
+          <br> <br> 
+          <p>* The creator of this tool has nor claims any relationship to AstraZeneca nor Covance. 
+            I am just a person from a lab sharing the tool I made so that I didn't mess up my shipments.
+            Maybe you will have an easier time shipping like I do! <br>
+            Additional information can be found <a href='./info.html'>Here</a>.
+          </p>
+        </div>
+        <div class="col-sm-4">
+          <h3> Requisitions and Matched Specs:</h3>
+          <pre size='20' id="ScannedOutput"></pre>
+        </div>
+        <div class="col-sm-3">
+          <h3> Unmatched Specs:</h3>
+          <pre size='20' id="UnmatchedOutput"></pre>
+        </div>
       </div>
-      <div class="col-sm-4">
-        <h3> Requisitions and Matched Specs:</h3>
-        <pre size='20' id="ScannedOutput"></pre>
-      </div>
-      <div class="col-sm-3">
-        <h3> Unmatched Specs:</h3>
-        <pre size='20' id="UnmatchedOutput"></pre>
-      </div>
-    </div>
-  </div
-</body>
+    </div
+  </body>
 </html>
