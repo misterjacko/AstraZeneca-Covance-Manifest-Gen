@@ -126,3 +126,5 @@ function cleanString(string) {
   string = string.replace(/\D+/g, '');
   return string
 }
+
+fetch('https://i0q7g7j06l.execute-api.us-east-1.amazonaws.com/Prod/Prod');
